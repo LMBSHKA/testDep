@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <title> ЛовиЛодку </title>
+    <head>
+        {% block css %} {% endblock  %}
+        <link rel="stylesheet" href="{% static "deps\css\home.css" %}">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="rectangle_menu">
+            <a class="logo_menu" href="{% url "main:index" %}">ЛОВИЛОДКУ</a>
+            <div class="menu text">
+                <div class="menu_galery">ГАЛЕРЕЯ</div> 
+                <div class="menu_location">МЕСТА РЫБАЛКИ</div>
+                <div class="menu_thing">СНАРЯЖЕНИЕ</div>
+                {% if not user.is_authenticated %}
+                    <a class="button_login" href="{% url "user:login" %}"> <button class="text">Войти</button></a>
+                    <a class="button_registration text" href="{% url "user:registration" %}"> <button class="text"> Регистрация </button></a>
+                    {% else %}
+                    <a class="button_profile" href="{% url "user:profile" %}"> <button class="text">Профиль </button></a>
+                    <a class="button_logout" href="{% url "user:logout" %}"> <button class="text"> Выйти </button></a>
+                {% endif %}
+            </div>
+        </div>
+        {% block content %} {% endblock  %}
+    </body>
+</html>

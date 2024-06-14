@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps\css\register.css" %}">
+{% endblock  %}
+
+{% block content %}
+<form action="{% url "user:registration" %}" method="post">
+    <div class="register_menu">
+        {% csrf_token %}
+        <div class="register_menu_enter">
+            <a class="a_enter" href="{% url "user:login" %}">Войти</a>
+        </div>
+        <div class="register_menu_register">
+            <a class="a_register" href="">Регистрация</a>
+        </div>
+        
+        <input type="username" class="name" id="id_username"
+        value="{% if form.username.value %}{{ form.username.value }}{% endif %}"
+        name="username" placeholder="Ник">
+        {% if form.username.errors %}
+            <div class="alert alert-danger alert-dismissible fade show">{{form.username.errors}}</div>
+        {% endif %}
+        <input type="email" class="email" id="id_email"
+        value="{% if form.email.value %}{{ form.email.value }}{% endif %}"
+        name="email" placeholder="Почта">
+        {% if form.email.errors %}
+            <div class="alert alert-danger alert-dismissible fade show">{{form.email.errors}}</div>
+        {% endif %}
+        <input type="password" class="password" id="id_password1"
+        value="{% if form.password1.value %}{{ form.password1.value }}{% endif %}"
+        name="password1" placeholder="Пароль">
+
+        {% if form.password1.errors %}
+            <div class="alert alert-danger alert-dismissible fade show">{{form.password1.errors}}</div>
+        {% endif %}
+
+        <input type="password" class="confirmed_password" id="id_password2"
+        value="{% if form.password2.value %}{{ form.password2.value }}{% endif %}"
+        name="password2" placeholder="Подтверждение пароля">
+
+        {% if form.password2.errors %}
+            <div class="alert alert-danger alert-dismissible fade show">{{form.password2.errors}}</div>
+        {% endif %}
+        
+        <button type="submit" class="create_acc">Создать аккаунт</button>
+    </div>
+</form>
+{% endblock  %}

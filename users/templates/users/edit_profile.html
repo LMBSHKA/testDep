@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "deps\css\edit.css" %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+{% endblock  %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <section class="edit-container">
+            
+        <div class="edit-block">
+            <div>
+                <h3>Имя</h3>
+                <input type="text" class="input name" name="first_name" placeholder="Имя" value="{{form.first_name.value|default_if_none:''}}">
+            </div>
+            <div>
+                <h3>Фамилия</h3>
+                <input type="text" class="input family-name" name="last_name" placeholder="Фамилия" value="{{form.last_name.value|default_if_none:''}}">
+            </div>
+            <div>
+                <h3>О себе</h3>
+                <input type="text" class="input about" name="about" placeholder="О себе" value="{{form.about.value|default_if_none:''}}">
+            </div>
+        </div>
+        <div class="edit-block">
+            <div>
+                <h3>Никнейм</h3>
+                <input type="text" class="input nickname" name="username" placeholder="Никнейм" value="{{form.username.value}}">
+            </div>
+            <div>
+                <h3>Почта</h3>
+                <input type="text" class="input email" name="email" placeholder="Почта" value="{{form.email.value}}">
+                
+            </div>
+        </div>
+        <div class="edit-block">
+            <h3>Фото</h3>
+            {% if user.image %}
+                <div class="photo"><img src="{{user.image.url}}" id="avatar"></div>
+            {% else %}
+                <img src="{% static "deps/image/defoult_profile.jpg" %}"
+                        alt="Аватар пользователя" class="img-fluid rounded-circle" id="avatar">
+            {% endif %}
+            <input type="file" id="id_image" name='image' accept="image/*">
+            {% if form.image.errors %}
+                <div class="alert alert-danger alert-dismissible fade show">{{form.image.errors}}</div>
+            {% endif %}
+            <button type="submit" class="save">Сохранить</button>
+        </div>
+    </section>
+    <!--<input type="text" class="edit_username" name="username" placeholder="Ник" value="{{form.username.value}}" required>
+    {{form.email}}
+    <input type="text" name="about" placeholder="Расскажите о себе" value="{{form.about.value}}" required>
+    <input type="file" id="id_image"
+    name='image'
+    accept="image/*">
+    {% if form.image.errors %}
+    <div class="alert alert-danger alert-dismissible fade show">{{form.image.errors}}</div>
+    {% endif %}
+    <button type="submit" class="submit_editor text">Подтвердить изменение профиля</button>
+</form>-->
+{% endblock  %}

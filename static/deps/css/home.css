@@ -1,0 +1,520 @@
+@font-face{
+    font-family: "Molot";
+    src: url("fonts/Molot.otf") format("opentype");
+}
+
+@font-face{
+    font-family: Gilory;
+    src: url("fonts/Gilroy-Light.otf") format("opentype");
+}
+
+@font-face{
+    font-family: Helvetica;
+    src: url("fonts/helvetica_regular.otf") format("opentype");
+}
+
+/*html { overflow-x: hidden; }*/
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.menu_galery{
+    position: absolute;
+    top: 15px;
+    left: 37%;
+}
+
+.menu_location{
+    position: absolute;
+    top: 15px;
+    left: 45%;
+}
+
+.menu_thing{
+    position: absolute;
+    top: 15px;
+    left: 58%;
+}
+
+/*.vl {
+    position: absolute;
+    border-left: 6px solid green;
+    height: 5000px;
+    left: 81.5px;
+    top: 0px;
+}
+
+.vv{
+    position: absolute;
+    border-left: 6px solid green;
+    height: 5000px;
+    left: 1432.5px;
+    top: 0px;
+}
+*/
+.button_login{
+    position: absolute;
+    top: 15px;
+    left: 81%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.button_registration{
+    position: absolute;
+    top: 15px;
+    left: 89%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.button_profile{
+    position: absolute;
+    top: 15px;
+    left: 83%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.button_logout{
+    position: relative;
+    top: 15px;
+    left: 93%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.rectangle_menu{
+    top: 1px;
+    left: 80px;
+    position: relative;
+    width: 88%;/*1345px;*/
+    height: 49px;
+    border:none;
+    background: #1C5D99;/*#1C5D99;*/
+    border-radius: 15px;
+}
+
+.logo_menu{
+    position: absolute;
+    left: 1%;
+    top: 5px;
+    color: #FFFFFF;
+    font-size: 35px;
+    text-decoration: none;
+    font-family: Molot;
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+
+/*.a_logo_menu{
+    text-decoration: none;
+    color: #ffffff;
+}*/
+
+.menu{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.big_logo{
+    position: relative;
+    color: #4A9FEE;
+    font-size: 767%;/*247px*/
+    top: -20px;
+    left: 80.5px;
+    font-family: Molot;
+}
+
+.description{
+    position: relative;
+    left: 80px;
+    top: -60px;
+    max-width: 1345px;
+    font-weight: bolder;
+    font-size: 36.1px;
+}
+
+.ditailed_description{
+    position: relative;
+    top: -40px;
+    left: 80px;
+    max-width: 700px;
+    font-size: 100%;
+}
+
+.text{
+    font-family: Gilory;
+    letter-spacing: 1.3px;
+}
+
+.text_login{
+    font-family: Helvetica;
+    color: #1C5D99;
+    font-size: 24px;
+    text-align: center;
+}
+
+.text_registration{
+    font-family: Helvetica;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+}
+
+.our_advantages{
+    font-weight: 700;
+    position: relative;
+    top: 330px;
+    left: 77px;
+    font-size: 72px;
+}
+.registration{
+    position: relative;
+    height: 93px;
+    width: 221px;
+	border: none;
+	background: #1C5D99;
+	border-radius: 25px;
+	box-sizing: border-box;
+	transition: all 500ms ease; 
+    top: -140px;
+    left: 1073.5px;
+}
+
+.login{
+    position: relative;
+    width: 126px;
+    height: 97px;
+	border: none;
+	background: #C1E1FF;
+	border-radius: 25px;
+	box-sizing: border-box;
+	transition: all 500ms ease; 
+    top: -140px;
+    left: 1030px;
+}
+
+button.button_login_reg:before{
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 97px;
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	transition: all 2s ease;
+}
+
+button:hover:before {
+	width: 100%;
+}
+
+.river_img{
+    position: relative;
+    width: 1500px;
+    height: 100px;
+    top: -60px;
+    left: 80px;
+    padding-top: 30px;
+}
+
+button.text{
+    display: inline-block;
+    border-radius: 25px;
+    transition: all .3s;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #1C5D99;
+    color: #FFFFFF;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10rem;
+      z-index: -2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      transition: all .3s;
+  
+      z-index: -1;
+    }
+    &:hover {
+      background-color: #FFFFFF;
+      color: black;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+.rectangle_videos_photos{
+    position: relative;
+    width: 652px;
+    height: 331px;
+    border:none;
+    margin:auto;
+    background: #639295;
+    top: 370px;
+    left: -353px;
+    border-radius: 30px;
+}
+
+.text_photos_videos{
+    left: 20px;
+    top: 10px;
+    font-weight: bold;
+    position: absolute;
+    font-size: 48px;
+    color: #FFFFFF;
+    max-width: 500px;
+    line-height: 43.2px;
+}
+
+.rectangle_for_media{
+    position:absolute;
+    top: 129px;
+    width: 182px;
+    height: 182px;
+    border:none;
+    margin:auto;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.rectangle_media_1{
+
+    left: 20px;
+}
+
+.rectangle_media_2{
+
+    left: 235px;
+}
+
+.rectangle_media_3{
+    left: 450px;
+}
+
+.position_media{
+    position: relative;
+    left: 31px;
+    top: 29px;
+}
+
+.rectangle_location{
+    position: relative;
+    width: 652px;
+    height: 449px;
+    border:none;
+    margin:auto;
+    background: #639295;
+    top: 38px;
+    left: 338px;
+    border-radius: 30px;
+}
+
+.text_rec_location{
+    position: relative;
+    left: 22px;
+    top: 10px;
+    max-width: 500px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 43.2px;
+    color: #FFFFFF;
+}
+
+.map_photo{
+    position: relative;
+    top: 35px;
+    left: 20px;
+}
+
+.rectangle_progress{
+    position: relative;
+    width: 652px;
+    height: 333px;
+    border:none;
+    margin:auto;
+    background: #639295;
+    top: -40px;
+    left: -354px;
+    border-radius: 30px;
+}
+
+.text_progress{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 43.2px;
+    color: #FFFFFF;
+    max-width: 500px;
+}
+
+.rank{
+    position: relative;
+    left: 23px;
+}
+
+.noob{
+    position: relative;
+    top: 40px;
+}
+
+.expert{
+    position: relative;
+    top: 50px;
+}
+
+.master{
+    position: relative;
+    top: 60px;
+}
+
+.rectangles_all{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border:none;
+    margin:auto;
+    border-radius: 10px;
+}
+
+.rectangle1{
+    top: -130px;
+    left: 10px;
+    background: #639FAB;
+}
+
+.rectangle2{
+    top: -231px;
+    left: 135px;
+    background: #4CB66E;
+}
+
+.rectangle3{
+    top: -537px;
+    left: 260px;
+    background: #D49152;
+}
+
+.rectangle4{
+    top: -250px;
+    left: 70px;
+    background: #72B7B5;
+}
+
+.rectangle5{
+    top: -351px;
+    left: 200px;
+    background: #1C5D99;
+}
+
+.rectangle_recomendation{
+    position: relative;
+    width: 652px;
+    height: 333px;
+    border:none;
+    margin:auto;
+    background: #639295;
+    top: -260px;
+    left: 338px;
+    border-radius: 30px;
+}
+
+.text_recomendation{
+    position: absolute;
+    font-size: 48px;
+    line-height: 43.2px;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.car{
+    position: relative;
+    top: -430px;
+    left: 20px;
+}
+
+.boat{
+    position: relative;
+    top: -233px;
+    left: 180px;
+}
+
+.fishing_rod{
+    position: relative;
+    top: -60px;
+    left: 325px;
+}
+.tent{
+    position: relative;
+    top: 95px;
+    left: 430px;
+}
+
+.mountains{
+    position: relative;
+    top: -200px;
+    left: 80px;
+}
+
+.text_on_mountains{
+    position: absolute;
+    top: 40px;
+    left: 45px;
+    font-size: 40px;
+    line-height: 36px;
+    color: #FFFFFF;
+    max-width: 1200px;
+}
+
+.big_text{
+    position: absolute;
+    top: 140px;
+    left: 45px;
+    color: #FFFFFF;
+    font-size: 133px;
+    font-weight: bolder;
+    line-height: 168.68px;
+}
+
+#mountains{
+    width: 1342px;
+    height: 500px;
+}
+
+/*@media (max-width: 1200px){
+    .logo-menu{
+        letter-spacing: 40px; 
+    }
+}
+@media (max-width: 992px){
+    
+}
+@media (max-width: 768px){
+
+}
+@media (max-width: 480px){
+    
+}
+@media screen and (max-width: 320px){
+    .rectangle_menu{
+        width: 200%;
+    }
+}

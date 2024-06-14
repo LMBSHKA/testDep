@@ -1,0 +1,73 @@
+@font-face{
+    font-family: Helvetica;
+    src: url("fonts/helvetica_regular.otf") format("opentype");
+}
+
+
+body{
+    margin:0 auto;
+    
+}
+.edit-container{
+    margin:0 auto;
+    margin-top:50px;
+    padding:11px 12px;
+    display:flex;
+    background-color:rgba(28, 93, 153, 1);
+    grid-column-gap: 119px;
+    width:1344px;
+    height:425px;
+    border-radius:30px;
+
+   
+}
+
+.edit-block{
+    padding:5px;
+}
+.edit-block h3{
+    margin:0;
+    padding:0;
+    font-weight: 400;
+    font-size:30px;
+    line-height: 41.4px;
+    color: rgba(255, 255, 255, 1);
+}
+.input{
+    margin:0;
+    padding:0;
+    border-radius:50px;
+    width:426px;
+    height:30px;
+    border:none;
+}
+.input.about{
+    height:212px;
+    resize: none;
+}
+.photo{
+    width:200px;
+    height:200px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius:19px;
+
+}
+.save{
+    margin-top:137px;
+    margin-left: 94px;
+    margin-bottom: 5px;
+    width:106px;
+    height:fixed 34px;
+    border-radius:30px; 
+    padding:5px 10px;
+    background: rgba(255, 255, 255, 1);
+    color:rgba(28, 93, 153, 1);
+    padding: 0;
+    border: none;
+}
+
+#avatar{
+    width:200px;
+    height:200px;
+    border-radius:19px;
+}

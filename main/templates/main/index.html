@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <h1>
+        <div class="big_logo">
+            ЛОВИЛОДКУ
+        </div>
+    </h1>
+    <p>
+        <div class="description text">
+            делитесь свомим впечатлениями от рабалок на комплексной платформе
+        </div>
+            <br> 
+        <div class="ditailed_description">
+            Ловилодка - ваш идеальный спутник в мире рыбной страсти!<br> делитесь своими лучшими моментами на рыбалке - от увлекательных фотографий и захватывающих видео до тайных мест, где каждый бросок удочки становится приключением
+        </div>
+    </p>
+    {% if not user.is_authenticated %}
+    <div>
+        <a href="{% url "user:login" %}"><button class="login text_login button_login_reg">войти</button></a>
+        <a href="{% url "user:registration" %}"><button class="registration text_registration button_login_reg"> регистрация </button></a>
+    </div>
+    {% endif %}
+    <div class="river_img">
+        <img src="{% static "deps/image/river.png" %}">
+    </div>
+    <h1>
+        <div class="our_advantages text">
+            наши преимущества
+        </div>
+    </h1>
+    <div class="rectangle_videos_photos">
+        <div class="text_photos_videos text">
+            галерея ваших фотографий и видео
+        </div>
+        <div class="rectangle_for_media rectangle_media_1">
+            <div class="position_media">
+                <img src="{% static "deps/image/photo.png" %}">
+            </div>
+        </div>
+        <div class="rectangle_for_media rectangle_media_2">
+            <div class="position_media">
+                <img src="{% static "deps/image/film.png" %}">
+            </div>
+        </div>
+        <div class="rectangle_for_media rectangle_media_3">
+            <div class="position_media">
+                <img src="{% static "deps/image/station.png" %}">
+            </div>
+        </div>
+    </div>
+    <div class="rectangle_location">
+        <div class="text_rec_location text">
+            места, маршруты, пути, схемы
+        </div>
+        <div class="map_photo">
+            <img src="{% static "deps/image/map.png" %}">
+        </div>
+    </div>
+    <div class="rectangle_progress"> 
+        <div class="text_progress text">
+            прогресс на сайте титулы и достижения
+        </div>
+        <div class="rank">
+            <div class="noob">
+                <img src="{% static "deps/image/noob.png" %}">
+            </div>
+            <div class="expert">
+                <img src="{% static "deps/image/expert.png" %}">
+            </div>
+            <div class="master">
+                <img src="{% static "deps/image/master.png" %}">
+            </div>
+        </div>
+        <div class="rectangles_all rectangle1"></div>
+        <div class="rectangles_all rectangle2"></div>
+        <div class="rectangles_all rectangle4"></div>
+        <div class="rectangles_all rectangle5"></div>
+        <div class="rectangles_all rectangle3"></div>
+    </div>
+    <div class="rectangle_recomendation">
+        <div class="text_recomendation text">
+            рекомендуйте <br>снаряжения и транспорт
+        </div>
+        <div class="pictures_recomendtion">
+            <div class="tent">
+                <img src="{% static "deps/image/tent.png" %}">
+            </div>
+            <div class="fishing_rod">
+                <img src="{% static "deps/image/fishing_rod.png" %}">
+            </div>
+            <div class="boat">
+                <img src="{% static "deps/image/boat.png" %}">
+            </div>
+            <div class="car">
+                <img src="{% static "deps/image/car.png" %}">
+            </div>
+        </div>
+    </div>
+    <div class="mountains">
+        <img src="{% static "deps/image/mountains.png" %}" id="mountains">
+        <div class="text_on_mountains text"> 
+            Наш сервис позволяет вам делиться не только локациями для рыбалки и прекрасными местами, но и своим восторгом от природы. Откройте для себя новые уголки земли
+        </div>
+        <div class="big_text text">
+            делись просторами
+        </div>
+    </div>
+    <div class="vl"></div>
+    <div class="vv"></div>
+{% endblock  %}

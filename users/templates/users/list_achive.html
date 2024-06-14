@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "deps/css/list.css" %}">
+{% endblock  %}
+
+{% block content %}
+<div class="form_for_upload_images">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.image}}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% for image in users_uploads %}
+    {% if image.category == "achivements" %}
+        <img src="{{image.image.url}}" id="upload_images">
+    {% endif %}
+{% endfor %}
+{% endblock content %}

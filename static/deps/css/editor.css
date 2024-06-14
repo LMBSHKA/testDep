@@ -1,0 +1,21 @@
+.submit_editor{
+    position: relative;
+    top: 200px;
+    left: 10px
+}
+
+.edit_first_name{
+    position: relative;
+    top: 100px;
+    left: 50px;
+    width:450px;
+    height:35px;
+    border-radius: 30px;
+}
+
+.edit_username{
+    position: relative;
+    width:450px;
+    height:35px;
+    border-radius: 30px;
+}
